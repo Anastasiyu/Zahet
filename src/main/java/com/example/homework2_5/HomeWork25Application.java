@@ -41,9 +41,9 @@ public class HomeWork25Application {
 
 
 		System.out.println("Самый старый пользователь");
-			Collections.sort(new ArrayList<>(), AgeComparator);
-			System.out.println(users.stream().max(AgeComparator));
-		}
+		Collections.sort(new ArrayList<>(), AgeComparator);
+		System.out.println(users.stream().max(AgeComparator));
+	}
 	//убрать дубликаты сравнение идет по методу equals
 
 	public static Collection<User> distinct(Collection<User> users) {       //убрать дубликаты сравнение идет по методу equals
@@ -51,13 +51,13 @@ public class HomeWork25Application {
 
 
 	}
-//	компоратор сортирует список объектов по возрасту
+	//	компоратор сортирует список объектов по возрасту
 	public  static Comparator<User> AgeComparator = new Comparator<User>(){
-	@Override
-	public int compare(User a1, User a2) {
-		return  a1.getAge() - a2.getAge();
-	}
-};
+		@Override
+		public int compare(User a1, User a2) {
+			return  a1.getAge() - a2.getAge();
+		}
+	};
 	//	компоратор сортирует список объектов по имени
 	public  static Comparator<User> NameComparator = new Comparator<User>(){
 		@Override
